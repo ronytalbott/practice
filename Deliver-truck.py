@@ -11,5 +11,5 @@ def execute_delivery_route(truck, deliveries):
             deliveries -= 1
         elif truck.delivery.at.left:
             truck.turn.left()
-        elif not truck.road.ahead:
+        else truck.road.ahead:
             truck.turn.around() 
