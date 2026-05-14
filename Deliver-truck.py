@@ -1,3 +1,4 @@
+/I didnt do this :( 
 # Example delivery truck control loop
 # Adjust object names and methods to match your actual truck API.
 
@@ -11,7 +12,4 @@ def execute_delivery_route(truck, deliveries):
         elif truck.delivery.at.left:
             truck.turn.left()
         elif not truck.road.ahead:
-            truck.turn.around()
-
-        # Add any additional navigation logic here.
-
+            truck.turn.around() 
