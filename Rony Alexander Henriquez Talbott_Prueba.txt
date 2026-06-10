@@ -1,0 +1,100 @@
+Algoritmo Prueba_01
+	Definir Nfac, TipP, Mat, Ext, TipE, Edad, For Como Entero
+	Definir Ncli, Prod Como Caracter
+	Definir PreP, PreM, PreE, DescE, DescF, Subt, Imp, SubtD, Tot Como Real
+	Escribir "Numero de factura"
+	Leer Nfac
+	Escribir "Nombre de cliente"
+	leer Ncli
+	Escribir "Tipos de producto"
+	Escribir "1.Cadena"
+	Escribir "2.Pulsera"
+	Escribir "3.Dije"
+	Leer TipP
+	Segun TipP Hacer
+		1:
+			PreP=1000
+			Prod="Cadena"
+		2:
+			PreP=500
+			Prod="Pulsera"
+		3:
+			PreP=200
+			Prod="Dije"
+		De Otro Modo:
+			Escribir "Opcion Invalida"
+	Fin Segun
+	Escribir "Material"
+	Escribir "1.Oro"
+	Escribir "2.Plata"
+	Escribir "3.Bronce"
+	Leer Mat
+	Segun Mat Hacer
+		1:
+			PreM=PreP*.50
+		2:
+			PreM=PreP*.20
+		3:
+			PreM=PreP*.10
+		De Otro Modo:
+			Escribir "Opcion Invalida"
+	Fin Segun
+	Escribir "Desea Extra?"
+	Escribir "1.Si"
+	Escribir "2.No"
+	Leer Ext
+	Si Ext=1 Entonces
+		Escribir "1.Estuche de presentación"
+		Escribir "2.Sello de garantía"
+		Escribir "3.Cintas decorativas"
+		Leer TipE
+		Segun TipE Hacer
+			1:
+				PreE=300
+			2:
+				PreE=200
+			3:
+				PreE=100
+			De Otro Modo:
+				Escribir "Opcion Invalida"
+		Fin Segun
+	SiNo
+		PreE=0
+	Fin Si
+	Subt=PreP+PreM+PreE
+	Escribir "Ingrese su edad"
+	Leer Edad
+	Si Edad>=60 Entonces
+		DescE=Subt*.25
+	SiNo
+		DescE=0
+	Fin Si
+	Escribir "Forma de pago"
+	Escribir "1.Credito"
+	Escribir "2.Contado"
+	Leer For
+	Segun For Hacer
+		1:
+			DescF=Subt*.05
+		2:
+			DescF=Subt*.15
+		De Otro Modo:
+			Escribir "Opcion Invalida"
+	Fin Segun
+	Imp=Subt*.15
+	DescT=DescF+DescE
+	SubtD=Subt-DescT
+	Tot=SubtD+Imp
+	Escribir "Numero de factura_________________________",Nfac
+	Escribir "Nombre de cliente_________________________",Ncli
+	Escribir "Tipo de producto__________________________",Prod
+	Escribir "Precio de producto________________________",PreP
+	Escribir "Precio de material________________________",PreM
+	Escribir "Precio de extra___________________________",PreE
+	Escribir "________________________________________________"
+	Escribir "Subtotal__________________________________",Subt
+	Escribir "Descuento de tercera edad_________________",DescE
+	Escribir "Descuento de forma de pago________________",DescF
+	Escribir "Impuesto__________________________________",Imp
+	Escribir "Total a pagar_____________________________",Tot
+FinAlgoritmo
